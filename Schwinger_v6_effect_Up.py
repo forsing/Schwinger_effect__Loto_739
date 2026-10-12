@@ -11,9 +11,9 @@ from scipy.spatial import cKDTree
 
 
 DEFAULTS = (
-    "/Users/4c/Desktop/GHQ/data/loto7_4698_k80.csv",
-    "/Users/4c/Desktop/GHQ/data/loto7_4698_k80_loto_2971.csv",
-    "/Users/4c/Desktop/GHQ/data/loto7_4698_k80_loto_plus_1727.csv",
+    "/data/loto7_4698_k80.csv",
+    "/data/loto7_4698_k80_loto_2971.csv",
+    "/data/loto7_4698_k80_loto_plus_1727.csv",
 )
 
 WINDOW, STARTS = 96, 12
@@ -583,7 +583,7 @@ if __name__ == "__main__":
 
 
 """
-Ulaz: /Users/4c/Desktop/GHQ/data/loto7_4698_k80.csv; redova=4698
+Ulaz: /data/loto7_4698_k80.csv; redova=4698
 Validacija: 16/48
 Validacija: 32/48
 Validacija: 48/48
@@ -597,7 +597,7 @@ SCHWINGER V6 EFFECT: prosek=1.2500; pogodaka 0..7=[10, 31, 20, 3, 0, 0, 0, 0]
 Kontrola: prethodno izvuceno kolo: prosek=1.2188; pogodaka 0..7=[13, 30, 16, 4, 1, 0, 0, 0]
 Isti nauceni skor bez aktivacionih clanova: prosek=1.1719; pogodaka 0..7=[14, 30, 16, 3, 1, 0, 0, 0]
 Poslednji red: 4,12,18,28,35,36,37
-SLEDECI RED 4699: 2,7,8,9,14,38,39
+SLEDECI RED 4699: 2,x,8,y,14,z,39
 Skor=0.8325573310; iteracija=17; vec postoji u istoriji=False
 Empirijska podrska: L1 poluprecnik=2.800000; kvantil=.75
 Proveren lokalni maksimum dozvoljenih zamena; globalni maksimum nije potvrden.
@@ -605,7 +605,7 @@ Aktivacija preko barijere je strukturna analogija; skor nije verovatnoca dobitka
 
 
 
-Ulaz: /Users/4c/Desktop/GHQ/data/loto7_4698_k80_loto_2971.csv; redova=2971
+Ulaz: /data/loto7_4698_k80_loto_2971.csv; redova=2971
 Validacija: 16/48
 Validacija: 32/48
 Validacija: 48/48
@@ -619,7 +619,7 @@ SCHWINGER V6 EFFECT: prosek=1.1875; pogodaka 0..7=[13, 31, 15, 5, 0, 0, 0, 0]
 Kontrola: prethodno izvuceno kolo: prosek=1.2969; pogodaka 0..7=[11, 30, 16, 7, 0, 0, 0, 0]
 Isti nauceni skor bez aktivacionih clanova: prosek=1.3438; pogodaka 0..7=[10, 28, 20, 6, 0, 0, 0, 0]
 Poslednji red: 18,20,21,24,29,34,38
-SLEDECI RED 2972: 1,14,15,16,17,18,39
+SLEDECI RED 2972: 1,x,15,y,17,z,39
 Skor=0.6342677663; iteracija=14; vec postoji u istoriji=False
 Empirijska podrska: L1 poluprecnik=2.800000; kvantil=.75
 Proveren lokalni maksimum dozvoljenih zamena; globalni maksimum nije potvrden.
@@ -627,7 +627,7 @@ Aktivacija preko barijere je strukturna analogija; skor nije verovatnoca dobitka
 
 
 
-Ulaz: /Users/4c/Desktop/GHQ/data/loto7_4698_k80_loto_plus_1727.csv; redova=1727
+Ulaz: /data/loto7_4698_k80_loto_plus_1727.csv; redova=1727
 Validacija: 16/48
 Validacija: 32/48
 Validacija: 48/48
@@ -641,7 +641,7 @@ SCHWINGER V6 EFFECT: prosek=1.0625; pogodaka 0..7=[20, 27, 11, 5, 1, 0, 0, 0]
 Kontrola: prethodno izvuceno kolo: prosek=1.2969; pogodaka 0..7=[15, 23, 18, 8, 0, 0, 0, 0]
 Isti nauceni skor bez aktivacionih clanova: prosek=1.1406; pogodaka 0..7=[23, 19, 14, 6, 2, 0, 0, 0]
 Poslednji red: 4,12,18,28,35,36,37
-SLEDECI RED 1728: 1,2,3,4,5,9,12
+SLEDECI RED 1728: 1,x,3,y,5,z,12
 Skor=1.2770769004; iteracija=22; vec postoji u istoriji=False
 Empirijska podrska: L1 poluprecnik=3.200000; kvantil=.75
 Proveren lokalni maksimum dozvoljenih zamena; globalni maksimum nije potvrden.
@@ -653,13 +653,12 @@ Aktivacija preko barijere je strukturna analogija; skor nije verovatnoca dobitka
 """
 V6 koristi nelinearnu aktivaciju prelaza preko barijere: doprinos zavisi od prethodnih strukturnih promena, a smer odziva uči se iz podataka. Prošle su provere nultog polja, odziva na jačinu polja, izvoda, rekonstrukcije i hronologije. 
 
-Koristi nelinearnu aktivaciju prelaza preko barijere, inspirisanu Schwingerovim radom On Gauge Invariance and Vacuum Polarization.
+Inspirisano Schwingerovim radom On Gauge Invariance and Vacuum Polarization.
 
 CSV	        Sledeća kombinacija	Prosek pogodaka na 64 kola	Kontrola: prethodno izvučeno kolo
-Objedinjeni	2,7,8,9,14,38,39	1,3125	                    1,2188
-Loto	    1,14,15,16,17,18,39	1,1719	                    1,2969
-Loto Plus	1,2,3,4,5,9,12	    1,0469	                    1,2969
-
+Objedinjeni	2,x,8,y,14,z,39	    1,3125	                    1,2188
+Loto	    1,x,15,y,17,z,39	1,1719	                    1,2969
+Loto Plus	1,x,3,y,5,z,12	    1,0469	                    1,2969
 
 Prednost na ovom testu postoji samo za objedinjeni fajl. Provereni su aktivacija, izvod, rekonstrukcija, hronologija, ponovljivost i lokalni maksimum dozvoljenih zamena.
 """
